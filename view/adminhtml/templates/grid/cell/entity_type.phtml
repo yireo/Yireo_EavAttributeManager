@@ -1,0 +1,19 @@
+<?php
+declare(strict_types=1);
+
+use Loki\Components\Factory\ViewModelFactory;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Yireo\EavAttributeManager\ViewModel\EntityType;
+
+/** @version 0.3.3 */
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var ViewModelFactory $viewModelFactory */
+
+$value = $block->getValue();
+$entityType = $viewModelFactory->create(EntityType::class);
+?>
+<code>
+    <?= $entityType->getCodeById((int)$value); ?>
+</code>

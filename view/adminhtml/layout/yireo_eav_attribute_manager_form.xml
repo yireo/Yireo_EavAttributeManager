@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <update handle="loki_admin_components_form"/>
+
+    <body>
+        <referenceContainer name="content">
+            <block name="yireo.eav-attribute-manager.form" template="Loki_AdminComponents::form.phtml">
+                <arguments>
+                    <argument name="provider" xsi:type="string">
+                        Magento\Eav\Model\ResourceModel\Entity\Attribute\Collection
+                    </argument>
+                    <argument name="index_url" xsi:type="string">*/*/grid</argument>
+                    <argument name="fields" xsi:type="array">
+                        <item name="backend_type" xsi:type="array">
+                            <item name="field_type" xsi:type="string">select</item>
+                            <item name="options" xsi:type="object">Yireo\EavAttributeManager\ViewModel\Options\BackendTypeOptions</item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
+
+
+

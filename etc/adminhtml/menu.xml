@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Yireo_EavAttributeManager::index" title="EAV Attribute Manager" module="Yireo_EavAttributeManager" sortOrder="50" parent="Magento_Backend::stores_attributes" resource="Yireo_EavAttributeManager::index" action="yireo_eav_attribute_manager/index/grid" />
+    </menu>
+</config>

@@ -1,0 +1,17 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @version 0.3.3 */
+/** @var Escaper $escaper */
+/** @var Template $block */
+$value = $block->getValue();
+if (empty($value)) {
+    return;
+}
+
+$color = class_exists($value) ? '' : '#ffdad6';
+?>
+<code style="background-color: <?= $color ?>"><?php echo $value ?></code>

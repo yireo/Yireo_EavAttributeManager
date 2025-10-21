@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <update handle="loki_admin_components_grid"/>
+
+    <body>
+        <referenceContainer name="content">
+            <block name="yireo.eav-attribute-manager.grid" template="Loki_AdminComponents::grid.phtml">
+                <arguments>
+                    <argument name="provider" xsi:type="string">
+                        Magento\Eav\Model\ResourceModel\Entity\Attribute\Collection
+                    </argument>
+                    <argument name="columns" xsi:type="array">
+                        <item name="attribute_id" xsi:type="array">
+                            <item name="label" xsi:type="string">ID</item>
+                        </item>
+                        <item name="entity_type_id" xsi:type="array">
+                            <item name="label" xsi:type="string">Entity Type</item>
+                            <item name="cell_template" xsi:type="string">Yireo_EavAttributeManager::grid/cell/entity_type.phtml</item>
+                        </item>
+                        <item name="attribute_model" xsi:type="array">
+                            <item name="cell_template" xsi:type="string">Yireo_EavAttributeManager::grid/cell/classname.phtml</item>
+                        </item>
+                        <item name="backend_model" xsi:type="array">
+                            <item name="cell_template" xsi:type="string">Yireo_EavAttributeManager::grid/cell/classname.phtml</item>
+                        </item>
+                    </argument>
+                    <argument name="button_actions" xsi:type="array">
+                        <item name="new" xsi:type="array">
+                            <item name="method" xsi:type="string">newAction</item>
+                            <item name="label" xsi:type="string">Add EAV Attribute</item>
+                            <item name="primary" xsi:type="boolean">true</item>
+                        </item>
+                    </argument>
+                    <argument name="searchable_fields" xsi:type="array">
+                        <item name="attribute_code" xsi:type="string">attribute_code</item>
+                        <item name="attribute_model" xsi:type="string">attribute_model</item>
+                        <item name="backend_model" xsi:type="string">backend_model</item>
+                        <item name="backend_type" xsi:type="string">backend_type</item>
+                        <item name="frontend_model" xsi:type="string">frontend_model</item>
+                        <item name="frontend_input" xsi:type="string">frontend_input</item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
+
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Loki_Components:etc/loki_components.xsd">
+    <component
+        name="yireo.eav-attribute-manager.grid"
+        viewModel="Loki\AdminComponents\Component\Grid\GridViewModel"
+        repository="Loki\AdminComponents\Component\Grid\GridRepository">
+    </component>
+
+    <component
+        name="yireo.eav-attribute-manager.form"
+        viewModel="Loki\AdminComponents\Component\Form\FormViewModel"
+        repository="Loki\AdminComponents\Component\Form\FormRepository">
+    </component>
+</components>
