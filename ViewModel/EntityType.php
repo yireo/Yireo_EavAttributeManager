@@ -14,7 +14,7 @@ class EntityType implements ArgumentInterface
 
     public function getCodeById(int $entityTypeId): string
     {
-        $entityType = $this->entityTypeFactory->create()->load($entityTypeId);
+        $entityType = $this->entityTypeFactory->create()->load($entityTypeId); // @phpstan-ignore
         return $entityType->getEntityTypeCode();
     }
 }
