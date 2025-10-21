@@ -1,0 +1,30 @@
+{
+    "sequence": [
+        "Loki_AdminComponents",
+        "Loki_Components",
+        "Magento_Backend",
+        "Magento_Eav"
+    ],
+    "modules": [
+        "Loki_AdminComponents",
+        "Loki_Base",
+        "Loki_Components",
+        "Loki_CssUtils",
+        "Magento_Backend",
+        "Magento_Catalog",
+        "Magento_Config",
+        "Magento_Customer",
+        "Magento_Directory",
+        "Magento_Eav",
+        "Magento_Store",
+        "Magento_Theme",
+        "Magento_Ui",
+        "Yireo_CspUtilities"
+    ],
+    "components": [
+        "yireo.eav-attribute-manager.form",
+        "yireo.eav-attribute-manager.grid"
+    ],
+    "config": [],
+    "tests": []
+}
