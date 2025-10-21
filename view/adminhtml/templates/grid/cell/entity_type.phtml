@@ -15,5 +15,5 @@ $value = $block->getValue();
 $entityType = $viewModelFactory->create(EntityType::class);
 ?>
 <code>
-    <?= $entityType->getCodeById((int)$value); ?>
+    <?= $escaper->escapeHtml($entityType->getCodeById((int)$value)); ?>
 </code>

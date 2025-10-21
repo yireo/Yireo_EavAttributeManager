@@ -14,4 +14,4 @@ if (empty($value)) {
 
 $color = class_exists($value) ? '' : '#ffdad6';
 ?>
-<code style="background-color: <?= $color ?>"><?php echo $value ?></code>
+<code style="background-color: <?= $escaper->escapeHtml($color) ?>"><?php echo $escaper->escapeHtml($value) ?></code>
