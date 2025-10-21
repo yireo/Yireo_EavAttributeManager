@@ -26,6 +26,5 @@
         "yireo.eav-attribute-manager.grid"
     ],
     "config": [],
-    "tests": [],
-    "phpcs_severity": "9"
+    "tests": []
 }
