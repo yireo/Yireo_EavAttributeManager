@@ -1,24 +1,24 @@
 {
-  "name": "yireo/magento2-eav-attribute-manager",
-  "version": "1.0.0",
-  "description": "N/A",
-  "type": "magento2-module",
-  "require": {
-      "loki/magento2-components": "^2.0",
-      "loki/magento2-admin-components": "0.* | ^1.0",
-      "magento/module-backend": "^102.0",
-      "magento/module-eav": "^102.0",
-    "magento/framework": "^103.0"
-  },
-  "license": [
-    "OSL-3.0"
-  ],
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "yireo/magento2-eav-attribute-manager",
+    "version": "1.0.0",
+    "description": "N/A",
+    "type": "magento2-module",
+    "require": {
+        "loki/magento2-admin-components": "0.* | ^1.0",
+        "loki/magento2-components": "^2.0",
+        "magento/framework": "^103.0",
+        "magento/module-backend": "^102.0",
+        "magento/module-eav": "^102.0"
+    },
+    "license": [
+        "OSL-3.0"
     ],
-    "psr-4": {
-      "Yireo\\EavAttributeManager\\": ""
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Yireo\\EavAttributeManager\\": ""
+        }
     }
-  }
 }
