@@ -3,14 +3,14 @@
 **Manage EAV attributes from the Magento Admin Panel**
 
 ## Installation
-Install this package via composer (assuming you have setup the `composer.yireo.com` repository correctly already):
+Install this package via composer:
 ```bash
 composer require yireo/magento2-eav-attribute-manager
 ```
 
 Next, enable this module:
 ```bash
-bin/magento module:enable Yireo_EavAttributeManager
+bin/magento module:enable Yireo_EavAttributeManager Loki_AdminComponents Loki_nComponents 
 ```
 
 ## Usage

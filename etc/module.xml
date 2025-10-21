@@ -1,4 +1,11 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Yireo_EavAttributeManager"/>
+    <module name="Yireo_EavAttributeManager">
+        <sequence>
+            <module name="Loki_AdminComponents"/>
+            <module name="Loki_Components"/>
+            <module name="Magento_Backend"/>
+            <module name="Magento_Eav"/>
+        </sequence>
+    </module>
 </config>
