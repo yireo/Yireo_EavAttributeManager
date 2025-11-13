@@ -10,7 +10,7 @@ composer require yireo/magento2-eav-attribute-manager
 
 Next, enable this module:
 ```bash
-bin/magento module:enable Yireo_EavAttributeManager Loki_AdminComponents Loki_nComponents 
+bin/magento module:enable Yireo_EavAttributeManager Loki_AdminComponents Loki_Components 
 ```
 
 ## Usage
