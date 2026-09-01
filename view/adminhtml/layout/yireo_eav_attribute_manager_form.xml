@@ -15,6 +15,18 @@
                             <item name="field_type" xsi:type="string">select</item>
                             <item name="options" xsi:type="object">Yireo\EavAttributeManager\ViewModel\Options\BackendTypeOptions</item>
                         </item>
+                        <item name="is_required" xsi:type="array">
+                            <item name="field_type" xsi:type="string">switch</item>
+                        </item>
+                        <item name="is_user_defined" xsi:type="array">
+                            <item name="field_type" xsi:type="string">switch</item>
+                        </item>
+                        <item name="is_unique" xsi:type="array">
+                            <item name="field_type" xsi:type="string">switch</item>
+                        </item>
+                    </argument>
+                    <argument name="item_validators" xsi:type="array">
+                        <item name="eav_attribute_validator" xsi:type="object">Yireo\EavAttributeManager\Form\ItemValidator\EavAttributeValidator</item>
                     </argument>
                 </arguments>
             </block>
