@@ -28,5 +28,13 @@
     "config": [],
     "tests": [],
     "phpcs_severity": "9",
-    "phpstan_level": "4"
+    "phpstan_level": "4",
+    "php_versions": [
+        "8.2",
+        "8.3",
+        "8.4",
+        "8.5"
+    ],
+    "module_name": "Yireo_EavAttributeManager",
+    "composer_name": "yireo/magento2-eav-attribute-manager"
 }
