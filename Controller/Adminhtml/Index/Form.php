@@ -9,7 +9,7 @@ use Magento\Framework\View\Result\PageFactory as ResultPageFactory;
 
 class Form extends Action
 {
-    const ADMIN_RESOURCE = 'Yireo_EavAttributeManager::form';
+    const ADMIN_RESOURCE = 'Yireo_EavAttributeManager::save';
 
     public function __construct(
         Context $context,

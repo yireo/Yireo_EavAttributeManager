@@ -6,6 +6,9 @@
         <referenceContainer name="content">
             <block name="yireo.eav-attribute-manager.grid" template="Loki_AdminComponents::grid.phtml">
                 <arguments>
+                    <argument name="acl_resource" xsi:type="string">Yireo_EavAttributeManager::grid</argument>
+                    <argument name="save_acl_resource" xsi:type="string">Yireo_EavAttributeManager::save</argument>
+                    <argument name="delete_acl_resource" xsi:type="string">Yireo_EavAttributeManager::delete</argument>
                     <argument name="provider" xsi:type="string">
                         Magento\Eav\Model\ResourceModel\Entity\Attribute\Collection
                     </argument>

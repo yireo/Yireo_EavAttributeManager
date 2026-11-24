@@ -3,7 +3,15 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Yireo_EavAttributeManager::grid" title="YireoTraining Yireo_EavAttributeManager Grid" sortOrder="10"/>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_attributes">
+                        <resource id="Yireo_EavAttributeManager::index" title="EAV Attribute Manager" translate="title" sortOrder="50">
+                            <resource id="Yireo_EavAttributeManager::grid" title="View EAV Attributes" translate="title" sortOrder="10"/>
+                            <resource id="Yireo_EavAttributeManager::save" title="Edit EAV Attributes" translate="title" sortOrder="20"/>
+                            <resource id="Yireo_EavAttributeManager::delete" title="Delete EAV Attributes" translate="title" sortOrder="30"/>
+                        </resource>
+                    </resource>
+                </resource>
             </resource>
         </resources>
     </acl>
