@@ -4,7 +4,7 @@
     "description": "N/A",
     "type": "magento2-module",
     "require": {
-        "loki/magento2-admin-components": "^0.8 | ^0.9 | ^1.0",
+        "loki/magento2-admin-components": "^0.9.2 | ^1.0",
         "loki/magento2-components": "^2.0",
         "magento/framework": "^103.0",
         "magento/module-backend": "^102.0",

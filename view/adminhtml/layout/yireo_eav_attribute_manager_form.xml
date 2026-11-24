@@ -6,6 +6,9 @@
         <referenceContainer name="content">
             <block name="yireo.eav-attribute-manager.form" template="Loki_AdminComponents::form.phtml">
                 <arguments>
+                    <argument name="acl_resource" xsi:type="string">Yireo_EavAttributeManager::grid</argument>
+                    <argument name="save_acl_resource" xsi:type="string">Yireo_EavAttributeManager::save</argument>
+                    <argument name="delete_acl_resource" xsi:type="string">Yireo_EavAttributeManager::delete</argument>
                     <argument name="provider" xsi:type="string">
                         Magento\Eav\Model\ResourceModel\Entity\Attribute\Collection
                     </argument>
@@ -27,6 +30,10 @@
                     </argument>
                     <argument name="item_validators" xsi:type="array">
                         <item name="eav_attribute_validator" xsi:type="object">Yireo\EavAttributeManager\Form\ItemValidator\EavAttributeValidator</item>
+                        <item name="system_attribute_validator" xsi:type="object">Yireo\EavAttributeManager\Form\ItemValidator\SystemAttributeValidator</item>
+                    </argument>
+                    <argument name="item_delete_validators" xsi:type="array">
+                        <item name="system_attribute_validator" xsi:type="object">Yireo\EavAttributeManager\Form\ItemValidator\SystemAttributeValidator</item>
                     </argument>
                 </arguments>
             </block>
