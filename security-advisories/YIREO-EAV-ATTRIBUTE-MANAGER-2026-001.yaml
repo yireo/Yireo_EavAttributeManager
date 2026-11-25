@@ -1,0 +1,37 @@
+schema_version: "1.6.0"
+id: YIREO-EAV-ATTRIBUTE-MANAGER-2026-001
+published: "2026-11-25T00:00:00Z"
+modified: "2026-11-25T00:00:00Z"
+aliases: []
+summary: Missing ACL checks and input validation allow admin users to configure arbitrary model classes and tables on EAV attributes
+details: >
+  The EAV Attribute Manager did not declare or enforce ACL resources for viewing, editing and
+  deleting EAV attributes, so admin users without a specific grant could change and delete attributes.
+  The frontend, source, backend and attribute model fields accepted any class name and the backend
+  table accepted any table name. Magento instantiates these classes and uses these tables at runtime,
+  which could be abused for object-instantiation gadgets or to read and corrupt data in other tables.
+  System attributes could also be deleted or have their code, entity type, backend type, backend
+  table or user-defined flag changed, breaking the shop. Version 1.1.0 adds view, edit and delete ACL
+  resources below Stores > Attributes and enforces them on the grid and form actions. It only accepts
+  existing model classes of the matching EAV type and only the entity's own value table as backend
+  table, and it protects system attributes from deletion and from changes to their core fields.
+severity:
+  - type: CVSS_V3
+    score: "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+affected:
+  - package:
+      ecosystem: Packagist
+      name: yireo/magento2-eav-attribute-manager
+    ranges:
+      - type: ECOSYSTEM
+        events:
+          - introduced: "0"
+          - fixed: "1.1.0"
+references:
+  - type: PACKAGE
+    url: https://github.com/yireo/Yireo_EavAttributeManager
+database_specific:
+  cwe_ids:
+    - CWE-862
+    - CWE-20
+    - CWE-470
