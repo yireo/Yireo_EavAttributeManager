@@ -10,7 +10,7 @@ use Loki\Components\Component\ComponentRegistry;
 use Magento\Framework\App\ObjectManager;
 use Magento\Framework\AuthorizationInterface;
 use Magento\Framework\View\Element\AbstractBlock;
-use Magento\Framework\View\LayoutInterface;
+use Magento\Framework\View\Result\PageFactory;
 use Magento\TestFramework\Fixture\AppArea;
 use PHPUnit\Framework\TestCase;
 use Yireo\EavAttributeManager\Form\ItemValidator\EavAttributeValidator;
@@ -98,15 +98,11 @@ class LayoutTest extends TestCase
 
     private function getBlock(string $handle, string $blockName): AbstractBlock
     {
-        $layout = ObjectManager::getInstance()->create(LayoutInterface::class);
-        $layout->getUpdate()->addHandle('default');
-        $layout->getUpdate()->addHandle($handle);
-        $layout->getUpdate()->load();
-        $layout->generateXml();
-        $layout->generateElements();
+        $page = ObjectManager::getInstance()->get(PageFactory::class)->create();
+        $page->addHandle($handle);
 
-        $block = $layout->getBlock($blockName);
-        $this->assertInstanceOf(AbstractBlock::class, $block);
+        $block = $page->getLayout()->getBlock($blockName);
+        $this->assertInstanceOf(AbstractBlock::class, $block, 'Block "'.$blockName.'" not found');
 
         return $block;
     }
