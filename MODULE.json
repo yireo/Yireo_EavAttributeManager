@@ -10,15 +10,26 @@
         "Loki_Base",
         "Loki_Components",
         "Loki_CssUtils",
+        "Magento_AdminNotification",
         "Magento_Backend",
         "Magento_Catalog",
+        "Magento_Cms",
         "Magento_Config",
+        "Magento_Csp",
         "Magento_Customer",
         "Magento_Directory",
         "Magento_Eav",
+        "Magento_Indexer",
+        "Magento_MediaGalleryUiApi",
+        "Magento_Payment",
+        "Magento_Quote",
+        "Magento_Rule",
+        "Magento_Sales",
+        "Magento_SalesSequence",
         "Magento_Store",
         "Magento_Theme",
         "Magento_Ui",
+        "Magento_Variable",
         "Yireo_CspUtilities"
     ],
     "components": [
@@ -26,7 +37,11 @@
         "yireo.eav-attribute-manager.grid"
     ],
     "config": [],
-    "tests": [],
+    "tests": {
+        "unit": 14,
+        "integration": 8,
+        "functional": 0
+    },
     "phpcs_severity": "9",
     "phpstan_level": "4",
     "php_versions": [
@@ -36,5 +51,7 @@
         "8.5"
     ],
     "module_name": "Yireo_EavAttributeManager",
-    "composer_name": "yireo/magento2-eav-attribute-manager"
+    "composer_name": "yireo/magento2-eav-attribute-manager",
+    "skip_magento_versions": [],
+    "skip_css_utils": false
 }
